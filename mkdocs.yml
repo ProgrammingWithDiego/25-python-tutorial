@@ -28,7 +28,6 @@ theme:
       accent: lime
 
 plugins:
-  - social
   - search
 
 extra:
