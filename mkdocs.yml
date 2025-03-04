@@ -1,4 +1,4 @@
-site_name: MkDocs YouTube Tutorial
+site_name: Diego Paul Lee Tian Python Tutorial
 site_url: https://james-willett.github.io/mkdocs-material-youtube-tutorial/
 theme:
   name: material
@@ -12,6 +12,7 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - navigation.footer
   language: en
   palette:
     - scheme: default
@@ -19,7 +20,7 @@ theme:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
       primary: teal
-      accent: purple 
+      accent: deep purple 
     - scheme: slate 
       toggle:
         icon: material/toggle-switch
@@ -27,14 +28,18 @@ theme:
       primary: teal
       accent: lime
 
-plugins:
-  - search
-
-extra:
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/james-willett
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/TheJamesWillett
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/willettjames/
+markdown_extensions:
+  - attr_list
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        
+copyright: "Paul Lee"
